@@ -1,14 +1,14 @@
+theme = "cocoa"
 baseurl             = "https://you.github.io/"
 builddrafts         = false
 canonifyurls        = true
 contentdir          = "content"
 languageCode        = "en-US"
 layoutdir           = "layouts"
-publishdir          = "public"
-author              = "Arthur Dent"
-title               = "Arthur Dent"
+publishdir          = "docs"
+author              = "Zander Mackie"
+title               = "Code and its discontents"
 pygmentsuseclasses  = true
-disqusshortname     = "cocoaexamplesite" # Comment out to disable Disqus.
 pluralizelisttitles = false
 googleAnalytics     = "UA-123-45"
 
@@ -17,26 +17,20 @@ fixed = ":title/"
 blog  = "blog/:slug/"
 
 [params]
-author       = "Arthur Dent"
+author       = "Zander Mackie"
 cachebuster  = true # add the current unix timestamp in query string for cache busting css assets
 dateform     = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-description  = "Don't panic"
-email        = "you@example.space"
+description  = "LOL computers"
+email        = "zmackie@protonmail.com"
 faviconfile  = "img/leaf.ico"
-github       = "//github.com/you"
+github       = "//github.com/zanadar"
 highlightjs  = true
 lang         = "en"
-linkedin     = "//linkedin.com/in/you"
-twitter      = "//twitter.com/you"
-selfIntro    = "" # appears in the site header when set to a non-empty string
+selfIntro    = "In programming, as in everything else, to be in error is to be reborn. - Alan Perlis"
 
 # gravatar             = ""                # do not use in the same time as avatar
-avatar                 = "img/profile.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
+avatar                 = "img/noun_484238_cc.png" # path to image in static dir e.g img/avatar.png (do not use in the same time as gravatar)
 # highlightjslanguages = ["go"]            # additional languages not included in the "common" set
 
 extracssfiles = [ "/css/override.css" ] # In your `static` directory, add/remove files as necessary.
-
-# The following are DEPRECATED.
-gatracker              = "XYZ" # use googleAnalytics instead
-initials               = "ad"  # displayed on single post page; deprecated in v0.3.0.
