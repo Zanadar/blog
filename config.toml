@@ -1,5 +1,5 @@
 theme = "cocoa"
-baseurl             = "https://you.github.io/"
+baseurl             = "https://zanadar.github.io/"
 builddrafts         = false
 canonifyurls        = true
 contentdir          = "content"
