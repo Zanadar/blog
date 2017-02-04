@@ -5,19 +5,22 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
+	"path"
+	"strings"
 	"text/template"
 )
 
-type post struct {
+type Post struct {
 	Body  string `json:"markdown"`
 	Title string `json:"title"`
 	Date  string `json:"created_at"`
 }
-type posts struct {
-	Posts []post
+type Posts struct {
+	Posts []Post
 }
 
 var jsonFile = ".blog_posts.json"
+var postsDir = "posts"
 
 var postTemplate = `
 +++
@@ -28,6 +31,28 @@ date = "{{.Date}}"
 +++
 {{.Body}}
 `
+
+func mkFileName(title string) string {
+	filename := fmt.Sprintf("%v.md", strings.Replace(title, " ", "-", -1))
+	return path.Join(postsDir, filename)
+}
+
+func writeTemplate(tmpl *template.Template, p Post) error {
+	filename := mkFileName(p.Title)
+
+	f, err := os.Create(filename)
+	defer f.Close()
+	if err != nil {
+		return err
+	}
+
+	err = tmpl.Execute(f, p)
+	if err != nil {
+		return err
+	}
+	f.Sync()
+	return nil
+}
 
 func main() {
 
@@ -42,7 +67,7 @@ func main() {
 	}
 	fmt.Println(jf)
 
-	var posts posts
+	var posts Posts
 	err = json.Unmarshal(jf, &posts)
 	if err != nil {
 		panic(err)
@@ -51,9 +76,9 @@ func main() {
 	t := template.Must(template.New("post").Parse(postTemplate))
 
 	for _, p := range posts.Posts {
-		err := t.Execute(os.Stdout, p)
+		err = writeTemplate(t, p)
 		if err != nil {
-			fmt.Println("executing template:", err)
+			fmt.Println("problem executing template:", err)
 		}
 	}
 
