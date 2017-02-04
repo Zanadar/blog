@@ -4,18 +4,30 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+	"os"
+	"text/template"
 )
 
-type Post struct {
+type post struct {
 	Body  string `json:"markdown"`
 	Title string `json:"title"`
 	Date  string `json:"created_at"`
 }
-type Posts struct {
-	Posts []Post
+type posts struct {
+	Posts []post
 }
 
 var jsonFile = ".blog_posts.json"
+
+var postTemplate = `
++++
+title = "{{.Title}}"
+draft = false
+date = "{{.Date}}"
+
++++
+{{.Body}}
+`
 
 func main() {
 
@@ -30,11 +42,19 @@ func main() {
 	}
 	fmt.Println(jf)
 
-	var posts Posts
+	var posts posts
 	err = json.Unmarshal(jf, &posts)
 	if err != nil {
 		panic(err)
 	}
 	fmt.Printf("%+v", posts)
+	t := template.Must(template.New("post").Parse(postTemplate))
+
+	for _, p := range posts.Posts {
+		err := t.Execute(os.Stdout, p)
+		if err != nil {
+			fmt.Println("executing template:", err)
+		}
+	}
 
 }
