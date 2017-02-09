@@ -1,15 +1,12 @@
+
 +++
-date = "2015-06-20T14:02:37+02:00"
-title = "About"
+title = "About Me"
+date = "2016-02-03T16:52:14.000Z"
 hidden = true
 +++
+I'm a hacker in the old-school sense. Plain and simple. Taught myself by reading and writing code.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ullam earum dolorum! Sed, perspiciatis.
+- [Github](https://github.com/zanadar/)
+- [Twithub](https://twitter.com/zandermackie)
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 
-***
-
-### Lorem ipsum dolor.
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea dicta corporis ad inventore itaque impedit dolor atque amet exercitationem! Veniam qui voluptas maiores vel laudantium necessitatibus, velit ducimus! Iste hic facere, accusamus fugiat enim facilis.

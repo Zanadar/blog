@@ -2,7 +2,7 @@ baseurl = "https://zanadar.github.io"
 title = "CodeGrump"
 theme = "hugo-theme-vec"
 languageCode = "en-us"
-paginate = 10
+paginate = 20
 googleAnalytics = "UA-57408564-1"
 
 [menu]
