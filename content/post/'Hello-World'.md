@@ -1,6 +1,7 @@
 
 +++
 title = "'Hello World'"
+slug = "Hello_World"
 draft = false
 date = "2016-02-03T00:26:40.000Z"
 

@@ -1,7 +1,7 @@
 
 +++
 title = "#each in Elixir (pt 1)"
-draft = false
+draft = true
 date = "2016-09-04T22:03:00.000Z"
 
 +++
@@ -13,9 +13,9 @@ Rubyists use `#each` all over the place to iterate though collections.  Its supe
 
 Basically what `#each` does is execute the given block on every element of the given collection and then return the collection. Its usually used for side effects, rather than the return value.  `Array` implements this method, as do `Hash`, `Range`, and, even more interestingly, `CSV`.
 
->So how do I do the same thing in Elixir?  
+>So how do I do the same thing in Elixir?
 ###### Elixir
-This simple question gets at some of the difference between these two languages, and so I'll explore it in a little depth.  
+This simple question gets at some of the difference between these two languages, and so I'll explore it in a little depth.
 
 Here is some Elixir code roughly equivalent to the above:
 ```
@@ -29,16 +29,16 @@ Enum.each([1, 2, 3], &(IO.puts &1))
 
 Enum.each([1, 2, 3], &IO.puts/1)
 
-# Or perhaps most *Elixirishly* 
+# Or perhaps most *Elixirishly*
 
 [1, 2, 3] |> Enum.each(&IO.puts/1)
 ```
 
 ##### Look ma, no methods!
 
-Notice that we're not invoking a method on the array itself (this is actually a list, rather than an array). Elixir has types (list is a type) and functions (`#each` is a function scoped to the `Enum` module).  It does __not__ have objects which implement methods. Basically we're feeding the array into `Enum.each` and also giving *that* function an anonymous function in the second parameter to invoke on every member of the array. 
+Notice that we're not invoking a method on the array itself (this is actually a list, rather than an array). Elixir has types (list is a type) and functions (`#each` is a function scoped to the `Enum` module).  It does __not__ have objects which implement methods. Basically we're feeding the array into `Enum.each` and also giving *that* function an anonymous function in the second parameter to invoke on every member of the array.
 
-As for the versions above, that the second uses the shorthand inline function syntax (kind of similar Ruby's symbol to proc).  The `&1` is the first parameter passed to the function.  
+As for the versions above, that the second uses the shorthand inline function syntax (kind of similar Ruby's symbol to proc).  The `&1` is the first parameter passed to the function.
 
 The third version is most compact, but the most foreign looking.  Basically this second parameter demonstrates another version of the shorthand syntax that wraps a function (for which you specify the arity with the `/`) and then passes the first argument implicitly to that function.
 

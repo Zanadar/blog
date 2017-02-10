@@ -1,6 +1,7 @@
 
 +++
 title = "XOR for distance"
+slug = "^4dist"
 draft = false
 date = "2016-03-10T21:13:16.000Z"
 

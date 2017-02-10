@@ -1,6 +1,7 @@
 
 +++
 title = "Projects"
+hidden = true
 draft = false
 date = "2016-06-21T18:01:11.000Z"
 

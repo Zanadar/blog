@@ -1,6 +1,7 @@
 
 +++
 title = "Night and Day"
+slug = "Night_and_Day"
 draft = false
 date = "2016-02-20T17:10:15.000Z"
 

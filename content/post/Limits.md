@@ -1,6 +1,7 @@
 
 +++
 title = "Limits"
+slug = "Limits"
 draft = false
 date = "2016-04-02T16:21:21.000Z"
 
