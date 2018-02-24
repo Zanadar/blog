@@ -1,5 +1,5 @@
-baseurl = "https://www.example.com/"
-title = "Zander Mackie"
+baseurl = "https://www.zmackie.com/"
+title = "Zander M."
 author = "Zander Mackie"
 canonifyurls = true
 languagecode = "en"
@@ -7,6 +7,9 @@ theme = "black-and-light"
 
 pygmentsstyle       = "emacs"
 pygmentscodefences  = true
+
+paginate                 = 1
+paginatePath             = "page"
 
 [params]
   sitename = "Zander M."

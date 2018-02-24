@@ -3,4 +3,4 @@
 	url = https://github.com/Zanadar/zanadar.github.io
 [submodule "themes/black-and-light"]
 	path = themes/black-and-light
-	url = https://github.com/davidhampgonsalves/hugo-black-and-light-theme
+	url = https://github.com/Zanadar/hugo-black-and-light-theme
