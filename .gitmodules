@@ -1,6 +1,3 @@
 [submodule "themes/black-and-light"]
 	path = themes/black-and-light
 	url = https://github.com/Zanadar/hugo-black-and-light-theme
-[submodule "public"]
-	path = public
-	url = https://github.com/Zanadar/zanadar.github.io
