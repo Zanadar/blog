@@ -1,12 +1,6 @@
 [submodule "public"]
 	path = public
-	url = https://github.com/Zanadar/zanadar.github.io.git
-[submodule "themes/cocoa"]
-	path = themes/cocoa
-	url = https://github.com/nishanths/cocoa-hugo-theme.git
-[submodule "themes/hugo-cactus-theme"]
-	path = themes/hugo-cactus-theme
-	url = https://github.com/digitalcraftsman/hugo-cactus-theme.git
-[submodule "themes/hugo-theme-vec"]
-	path = themes/hugo-theme-vec
-	url = https://github.com/IvanChou/hugo-theme-vec.git
+	url = https://github.com/Zanadar/zanadar.github.io
+[submodule "themes/black-and-light"]
+	path = themes/black-and-light
+	url = https://github.com/davidhampgonsalves/hugo-black-and-light-theme

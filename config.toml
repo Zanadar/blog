@@ -1,27 +1,16 @@
-baseurl = "https://zanadar.github.io"
-title = "CodeGrump"
-theme = "hugo-theme-vec"
-languageCode = "en-us"
-paginate = 20
-googleAnalytics = "UA-57408564-1"
+baseurl = "https://www.example.com/"
+title = "Zander Mackie"
+author = "Zander Mackie"
+canonifyurls = true
+languagecode = "en"
+theme = "black-and-light"
 
-[menu]
-  # Shown in the side menu.
-  [[menu.main]]
-    name = "post"
-    weight = 0
-    url = "/post"
-  [[menu.main]]
-    name = "about"
-    weight = 1
-    url = "/about"
+pygmentsstyle       = "emacs"
+pygmentscodefences  = true
 
 [params]
-  Keywords = ""
-  Description = "Computing and its discontents"
-  Avater = "img/noun_80531_cc.png"
-  SelfIntro = "Like punning, programming is a play on words. - A. Perlis"
-  Email = "zmackie@protonmail.com"
+  sitename = "Zander M."
 
-  GithubID = "zanadar"
-  TwitterID = "zandermackie"
+[[menu.main]]
+    name = "About"
+    url  = "/about"

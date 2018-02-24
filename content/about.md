@@ -2,11 +2,11 @@
 +++
 title = "About Me"
 date = "2016-02-03T16:52:14.000Z"
-hidden = true
 +++
-I'm a hacker in the old-school sense. Plain and simple. Taught myself by reading and writing code.
+I'm Zander Mackie, a software developer. I work in distributed systems and infrastructure, and am deeply interested in security.
+This blog serves as a home page of sorts. Views expressed do not reflect those of my employer, whoever they happen to be when you read this.
 
 - [Github](https://github.com/zanadar/)
-- [Twithub](https://twitter.com/zandermackie)
+- [Twitter](https://twitter.com/zandermackie)
 
 
